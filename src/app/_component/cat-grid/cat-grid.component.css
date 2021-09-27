@@ -1,0 +1,47 @@
+div.items-container {
+    padding-bottom: 3rem;
+}
+
+div.item {
+    width: 16rem;
+    height: 100%;
+    max-width: 100%;
+    margin: 1rem;
+}
+
+div.items-container div.col-3 {
+    padding-bottom: 1rem;
+}
+
+h5.title, p.categoria, p.prezzo {
+    text-align: center;
+}
+
+h5.title {
+    font-size: 1.45rem;
+}
+
+p.categoria {
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-weight: 600;
+}
+
+p.prezzo {
+    width: 100%;
+    display: inline-block;
+}
+
+p.prezzo::first-letter {
+    padding-right: 0.3em;
+}
+
+img.card-img-top, h5.title {
+    cursor: pointer;
+}
+
+.coming-soon {
+    color: rgb(165, 30, 10);
+    font-weight: bold;
+    text-align: center;
+}

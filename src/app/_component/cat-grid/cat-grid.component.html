@@ -1,0 +1,15 @@
+<div class="row items-container">
+  <div class="col-3" *ngFor="let item of filteredItems">
+    <div class="item card">
+      <img class="card-img-top" [src]="item.getDisplayedImagePath()" [alt]="item.getTitle()"
+        (mouseover)="item.onImageMouseOver()" (mouseout)="item.onImageMouseOut()" (click)="openDetail(item)">
+      <div class="card-body">
+        <h5 class="card-title title" (click)="openDetail(item)"> {{ item.getTitle() }} </h5>
+        <p class="card-text categoria"> {{ item.categoria }} </p>
+        <p class="card-text prezzo" *ngIf="!item.comingSoon"> {{ item.prezzo | currency: 'EUR':'symbol':'0.2-2' }} </p>
+        <p class="card-text coming-soon" *ngIf="item.comingSoon"> IN ARRIVO </p>
+        <!-- <a href="#" class="btn btn-primary"> Aggiungi al carrello </a> -->
+      </div>
+    </div>
+  </div>
+</div>

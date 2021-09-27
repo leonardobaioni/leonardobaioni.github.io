@@ -1,0 +1,10 @@
+<app-cat-title> {{ title }} </app-cat-title>
+<div class="row">
+  <div class="col-4">
+    <app-cat-filters #catFilter [filters]="filters" (applyFilter)="catGrid.applyFilter($event)"
+      (removeFilter)="catGrid.removeFilter($event)"></app-cat-filters>
+  </div>
+  <div class="col-8">
+    <app-cat-grid #catGrid [items]="items"></app-cat-grid>
+  </div>
+</div>

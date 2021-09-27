@@ -1,0 +1,26 @@
+div.filters-container {
+    padding: 0 1rem;
+}
+
+input.price {
+    padding: .5rem;
+    margin-right: 1rem;
+    width: calc(50% - 1rem);
+    max-width: 8rem;
+}
+
+div.filter {
+    padding-bottom: 2rem;
+}
+
+div.filter ul {
+    margin-bottom: 0;
+}
+
+div.filter li.selected {
+    font-weight: bold;
+}
+
+div.filter li {
+    cursor: pointer;
+}

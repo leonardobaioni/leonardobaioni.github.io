@@ -1,0 +1,9 @@
+/* You can add global styles to this file, and also import other style files */
+
+.rey-thPos.rey-thPos--bottom-right {
+    display: none;
+}
+
+li {
+    list-style: none;
+}

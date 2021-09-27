@@ -1,0 +1,29 @@
+<div class="container-fluid" *ngIf="item">
+  <div class="row">
+    <div class="col-6">
+      <div class="main-image-container">
+        <img class="img-main" [src]="item.getDisplayedImagePath()" [alt]="item.getTitle()">
+      </div>
+      <div class="image-preview-container" *ngFor="let imagePath of item.imagesPath">
+        <img class="img-preview" [src]="imagePath" [alt]="item.getTitle()"
+          (click)="item.changeDisplayedImagePath(imagePath)">
+      </div>
+    </div>
+    <div class="col-6">
+      <h1 class="title"> {{ item.getTitle() }} </h1>
+      <h5 class="price"> {{ item.prezzo | currency: 'EUR':'symbol':'0.2-2' }} </h5>
+      <p class="description" [innerHTML]="item.descrizione"></p>
+    </div>
+  </div>
+  <div class="row" *ngIf="item.hasCaratteristiche()">
+    <div class="col">
+      <h1> Caratteristiche </h1>
+      <table>
+        <tr *ngFor="let caratteristica of item.caratteristiche">
+          <td class="car-property"> {{ caratteristica.property }} </td>
+          <td class="car-value"> {{ caratteristica.value }} </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>

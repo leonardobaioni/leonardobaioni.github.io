@@ -1,0 +1,24 @@
+.footer {
+    min-height: 8rem;
+    background-color: #2D5065;
+    color: #fff;
+}
+
+div.logo, div.info {
+    margin: auto;
+    text-align: center;
+}
+
+img.logo {
+    width: 75%;
+    max-width: 12rem;
+    margin: 1rem auto;
+}
+
+div.info p {
+    margin-bottom: 0;
+}
+
+div.info p.title {
+    font-weight: bold;
+}

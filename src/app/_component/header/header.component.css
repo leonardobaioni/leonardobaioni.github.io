@@ -1,0 +1,17 @@
+.header {
+    min-height: 8rem;
+    background-image: linear-gradient(#f0f0f0, #eeeeee);
+    box-shadow: 0 0 20px 2px #bbb;
+}
+
+div.logo, div.navbar {
+    margin: auto;
+    text-align: center;
+}
+
+img.logo {
+    width: 75%;
+    max-width: 12rem;
+    margin: 1rem auto;
+    cursor: pointer;
+}

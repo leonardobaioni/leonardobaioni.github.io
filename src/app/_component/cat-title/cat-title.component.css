@@ -1,0 +1,7 @@
+h1.title {
+    padding: 1rem 1.75rem;
+    font-size: 4rem;
+    text-transform: capitalize;
+    background: rgba(45, 80, 101, 20%);
+    color: #1F3344;
+}

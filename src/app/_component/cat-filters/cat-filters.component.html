@@ -1,0 +1,24 @@
+<div class="filters-container">
+  <div class="filter">
+    <h2> Marca </h2>
+    <ul>
+      <li *ngFor="let filter of filters.marca" (click)="applyFilterFn('MARCA', filter)"
+        [ngClass]="{ 'selected': filter.selected }"> {{ filter.value }} </li>
+    </ul>
+  </div>
+  <div class="filter">
+    <h2> Potenza </h2>
+    <ul>
+      <li *ngFor="let filter of filters.potenza" (click)="applyFilterFn('POTENZA', filter)"
+        [ngClass]="{ 'selected': filter.selected }"> {{ filter.value }} Watt </li>
+    </ul>
+  </div>
+  <!-- <div class="filter">
+    <h2> Prezzo </h2>
+    <input class="price" type="number" placeholder="Da">
+    <input class="price" type="number" placeholder="A">
+  </div> -->
+  <!-- <div class="filter">
+    <h2> Filtri Applicati </h2>
+  </div> -->
+</div>
