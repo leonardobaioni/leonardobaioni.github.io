@@ -1,5 +1,6 @@
 import { CatItem } from 'src/app/_viewmodel/cat-item';
 import { Component, OnInit } from '@angular/core';
+import { Record } from 'src/app/_mock/record';
 
 @Component({
   selector: 'app-monopattini',
@@ -19,25 +20,7 @@ export class MonopattiniComponent implements OnInit {
   }
 
   getItems(): void {
-    this.items = [
-      CatItem.init({
-        marca: 'Sunra',
-        modello: 'X7',
-        categoria: 'Monopattini',
-        potenza: 350,
-        prezzo: 399,
-        imagesPath: ['assets/img/x7/01.png', 'assets/img/x7/02.png', 'assets/img/x7/03.png', 'assets/img/x7/04.png',
-          'assets/img/x7/05.png', 'assets/img/x7/06.png', 'assets/img/x7/07.png', 'assets/img/x7/08.png']
-      }),
-      CatItem.init({
-        marca: 'Sunra',
-        modello: 'X8',
-        categoria: 'Monopattini',
-        potenza: 350,
-        prezzo: 499,
-        imagesPath: ['assets/img/x8/01.png', 'assets/img/x8/02.png', 'assets/img/x8/03.png']
-      })
-    ];
+    this.items = Record.MONOPATTINI;
   }
 
   buildFilters(): void {

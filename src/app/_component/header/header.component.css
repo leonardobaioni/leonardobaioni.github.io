@@ -11,7 +11,7 @@ div.logo, div.navbar {
 
 img.logo {
     width: 75%;
-    max-width: 12rem;
+    max-width: 22rem;
     margin: 1rem auto;
     cursor: pointer;
 }

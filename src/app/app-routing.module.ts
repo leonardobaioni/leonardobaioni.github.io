@@ -1,17 +1,18 @@
-import { SchedaProdottoComponent } from './pages/scheda-prodotto/scheda-prodotto.component';
-import { MotoComponent } from './pages/moto/moto.component';
-import { ContattiComponent } from './pages/contatti/contatti.component';
-import { ChiSiamoComponent } from './pages/chi-siamo/chi-siamo.component';
-import { AccessoriComponent } from './pages/accessori/accessori.component';
-import { MonopattiniComponent } from './pages/monopattini/monopattini.component';
-import { EbikeComponent } from './pages/ebike/ebike.component';
-import { ScooterComponent } from './pages/scooter/scooter.component';
-import { AutoComponent } from './pages/auto/auto.component';
-import { CountdownComponent } from './countdown/countdown.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { CountdownComponent } from './countdown/countdown.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { AccessoriComponent } from './pages/accessori/accessori.component';
+import { AutoComponent } from './pages/auto/auto.component';
+import { ChiSiamoComponent } from './pages/chi-siamo/chi-siamo.component';
+import { ContattiComponent } from './pages/contatti/contatti.component';
+import { EbikeComponent } from './pages/ebike/ebike.component';
+import { MonopattiniComponent } from './pages/monopattini/monopattini.component';
+import { MotoComponent } from './pages/moto/moto.component';
+import { SchedaProdottoComponent } from './pages/scheda-prodotto/scheda-prodotto.component';
+import { ScooterComponent } from './pages/scooter/scooter.component';
+import { VeicoliDaLavoroComponent } from './pages/veicoli-da-lavoro/veicoli-da-lavoro.component';
 import { Path } from './_constant/path';
 
 const routes: Routes = [
@@ -46,6 +47,10 @@ const routes: Routes = [
   {
     path: Path.MONOPATTINI,
     component: MonopattiniComponent
+  },
+  {
+    path: Path.VEICOLI_DA_LAVORO,
+    component: VeicoliDaLavoroComponent
   },
   {
     path: Path.ACCESSORI,

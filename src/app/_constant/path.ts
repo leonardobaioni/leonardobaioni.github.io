@@ -7,6 +7,7 @@ export class Path {
     public static SCOOTER = 'scooter';
     public static EBIKE = 'ebike';
     public static MONOPATTINI = 'monopattini';
+    public static VEICOLI_DA_LAVORO = 'veicoli-da-lavoro';
     public static ACCESSORI = 'accessori';
     public static SCHEDA_PRODOTTO = 'prodotto';
     public static CHI_SIAMO = 'chi-siamo';
