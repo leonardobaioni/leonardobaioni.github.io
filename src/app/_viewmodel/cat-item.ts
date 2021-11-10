@@ -7,11 +7,12 @@ export class CatItem {
     prezzo?: number;
     imagesPath?: string[];
     caratteristiche?: { property: string, value: string }[];
-    comingSoon?: boolean;
+    noPrice?: boolean;
+    noPriceLabel?: string;
     private displayedImagePath?: string;
 
     private constructor(marca: string, modello: string, descrizione: string, categoria: string, potenza: number, prezzo: number,
-        imagesPath: string[] = [], caratteristiche: { property: string, value: string }[] = []) {
+        noPriceLabel: string, imagesPath: string[] = [], caratteristiche: { property: string, value: string }[] = []) {
         this.marca = marca;
         this.modello = modello;
         this.descrizione = descrizione;
@@ -21,12 +22,13 @@ export class CatItem {
         this.imagesPath = imagesPath;
         this.caratteristiche = caratteristiche;
         this.changeDisplayedImagePath(this.imagesPath.length > 0 ? this.imagesPath[0] : null);
-        this.comingSoon = prezzo === null;
+        this.noPrice = prezzo === null;
+        this.noPriceLabel = noPriceLabel;
     }
 
     public static init(catItem: CatItem): CatItem {
         return new CatItem(catItem.marca, catItem.modello, catItem.descrizione, catItem.categoria, catItem.potenza,
-            catItem.prezzo, catItem.imagesPath, catItem.caratteristiche);
+            catItem.prezzo, catItem.noPriceLabel, catItem.imagesPath, catItem.caratteristiche);
     }
 
     public getTitle?(): string {
@@ -56,4 +58,5 @@ export class CatItem {
     public hasCaratteristiche?(): boolean {
         return this.caratteristiche && this.caratteristiche.length > 0;
     }
+
 }

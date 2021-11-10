@@ -21,7 +21,7 @@ export class NavbarComponent implements OnInit {
     // TODO: GET NavbarPages
     const arr: Page[] = [
       { title: 'Homepage', path: Path.HOMEPAGE, showInNavbar: true, navbarPosition: 1 },
-      { title: 'Auto', path: Path.AUTO, showInNavbar: true, navbarPosition: 2 },
+      { title: 'Auto', path: Path.AUTO, showInNavbar: false, navbarPosition: 2 },
       { title: 'Moto', path: Path.MOTO, showInNavbar: true, navbarPosition: 3 },
       { title: 'Scooter', path: Path.SCOOTER, showInNavbar: true, navbarPosition: 4 },
       { title: 'E-Bike', path: Path.EBIKE, showInNavbar: false, navbarPosition: 5 },

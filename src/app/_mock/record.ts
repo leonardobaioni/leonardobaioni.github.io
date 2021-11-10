@@ -42,6 +42,68 @@ export class Record {
                 'assets/img/portapacchi-robo-s/piastra-per-delivery-06.jpg', 'assets/img/portapacchi-robo-s/piastra-per-delivery-07.jpg',
                 'assets/img/portapacchi-robo-s/piastra-per-delivery-08.jpg', 'assets/img/portapacchi-robo-s/piastra-per-delivery-09.jpg'
             ]
+        }),
+        CatItem.init({
+            marca: 'LS2',
+            modello: 'Casco Airflow',
+            categoria: 'Accessori',
+            prezzo: 79.0,
+            imagesPath: [
+                'assets/img/casco-ls2/01.jpg', 'assets/img/casco-ls2/02.jpg', 'assets/img/casco-ls2/03.jpg', 
+                'assets/img/casco-ls2/04.jpg', 'assets/img/casco-ls2/05.jpg', 'assets/img/casco-ls2/06.jpg', 
+                'assets/img/casco-ls2/07.jpg', 'assets/img/casco-ls2/08.jpg', 'assets/img/casco-ls2/09.jpg', 
+                'assets/img/casco-ls2/10.jpg', 'assets/img/casco-ls2/11.jpg', 'assets/img/casco-ls2/12.jpg', 
+                'assets/img/casco-ls2/13.jpg', 'assets/img/casco-ls2/14.jpg', 'assets/img/casco-ls2/15.jpg', 
+                'assets/img/casco-ls2/16.jpg', 'assets/img/casco-ls2/17.jpg'
+            ]
+        }),
+        CatItem.init({
+            marca: 'LS2',
+            modello: 'Giacca antipioggia',
+            categoria: 'Accessori',
+            prezzo: 69.0,
+            imagesPath: [
+                'assets/img/giacca-ls2/01.jpg', 'assets/img/giacca-ls2/02.jpg', 'assets/img/giacca-ls2/03.jpg', 'assets/img/giacca-ls2/04.jpg'
+            ]
+        }),
+        CatItem.init({
+            marca: 'LS2',
+            modello: 'Guanti neri (con protezioni)',
+            categoria: 'Accessori',
+            prezzo: 49.99,
+            imagesPath: [
+                'assets/img/guanti-ls2/con-protezioni/black/01.jpg'
+            ]
+        }),
+        CatItem.init({
+            marca: 'LS2',
+            modello: 'Guanti viola (con protezioni)',
+            categoria: 'Accessori',
+            prezzo: 49.99,
+            imagesPath: [
+                'assets/img/guanti-ls2/con-protezioni/purple/01.jpg', 
+                'assets/img/guanti-ls2/con-protezioni/purple/02.jpg', 
+                'assets/img/guanti-ls2/con-protezioni/purple/03.jpg'
+            ]
+        }),
+        CatItem.init({
+            marca: 'LS2',
+            modello: 'Guanti neri',
+            categoria: 'Accessori',
+            prezzo: 39.99,
+            imagesPath: [
+                'assets/img/guanti-ls2/black/01.jpg', 
+                'assets/img/guanti-ls2/black/02.jpg'
+            ]
+        }),
+        CatItem.init({
+            marca: 'LS2',
+            modello: 'Guanti neri e grigi',
+            categoria: 'Accessori',
+            prezzo: 39.99,
+            imagesPath: [
+                'assets/img/guanti-ls2/black-and-grey/01.png'
+            ]
         })
     ];
 
@@ -83,7 +145,8 @@ export class Record {
             imagesPath: ['assets/img/miku-super/01.png', 'assets/img/miku-super/02.png', 'assets/img/miku-super/03.png',
                 'assets/img/miku-super/04.png', 'assets/img/miku-super/05.png', 'assets/img/miku-super/06.png',
                 'assets/img/miku-super/07.png', 'assets/img/miku-super/08.png', 'assets/img/miku-super/09.png',
-                'assets/img/miku-super/10.png', 'assets/img/miku-super/11.png', 'assets/img/miku-super/12.png']
+                'assets/img/miku-super/10.png', 'assets/img/miku-super/11.png', 'assets/img/miku-super/12.png'],
+            noPriceLabel: 'IN ARRIVO'
         })
     ];
 
@@ -145,9 +208,34 @@ export class Record {
     ];
 
     public static AUTO = [];
-    public static VEICOLI_DA_LAVORO = [];
+    public static VEICOLI_DA_LAVORO = [
+        CatItem.init({
+            marca: 'Regis',
+            modello: 'Epic0 - Pickup Cassonato',
+            categoria: 'Veicoli da lavoro',
+            descrizione: 'Il veicolo è stato concepito valutando le esigenze del mercato dell’elettrico e coniugandole ad una progettazione funzionale che rispondesse agli aspetti da noi ritenuti prioritari',
+            caratteristiche: [
+                { property: 'Dimensioni esterne (Lu X La X H (mm))', value: '3.700 X 1.500 X 1.640' },
+                { property: 'Piano di carico (Lu X La (mm))', value: '1.520 X 1.450' },
+                { property: 'Portata', value: '700 Kg' },
+                { property: 'Autonomia', value: '130 - 160 KM' },
+                { property: 'Tempo di ricarica standard (Carica batteria 3,3 kW)', value: '4,5 H' },
+                { property: 'Tempo di ricarica fast charge (Carica batteria 6,6 kW)', value: '2,5 H' },
+                { property: 'Dimensioni cassone (Lu X La X H sponde (mm))', value: '1.570 X 1.500 X 350-400' },
+                { property: 'Altezza  piano di carico', value: '700 mm' }
+            ],
+            potenza: null,
+            prezzo: null,
+            imagesPath: [
+                'assets/img/epico-finito-male/pickup-cassonato/01.jpg', 
+                'assets/img/epico-finito-male/pickup-cassonato/02.jpg', 
+                'assets/img/epico-finito-male/pickup-cassonato/03.png'
+            ],
+            noPriceLabel: 'DISPONIBILE'
+        })
+    ];
 
-    getAll(): CatItem[] {
+    public static getAll(): CatItem[] {
         const items = [
             Record.MONOPATTINI,
             Record.MOTO,
