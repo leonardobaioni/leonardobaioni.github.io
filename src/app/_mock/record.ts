@@ -122,10 +122,11 @@ export class Record {
                 { property: 'Batteria', value: '60V 20AH a litio, estraibile' }
             ],
             potenza: 800,
-            prezzo: 2499,
+            prezzo: null,
             imagesPath: ['assets/img/miku-max/01.png', 'assets/img/miku-max/02.png', 'assets/img/miku-max/03.png',
                 'assets/img/miku-max/04.png', 'assets/img/miku-max/05.png', 'assets/img/miku-max/06.png',
-                'assets/img/miku-max/07.png', 'assets/img/miku-max/08.png']
+                'assets/img/miku-max/07.png', 'assets/img/miku-max/08.png'],
+            noPriceLabel: 'DISPONIBILE'
         }),
         CatItem.init({
             marca: 'Sunra',
